@@ -1,0 +1,22 @@
+provider "aws" {
+  region = "af-south-1"
+  shared_credentials_file = "~/.aws/credentials"
+}
+
+resource "aws_instance" "web" {
+  ami           = "ami-04553a80a81afeeca"
+  instance_type = "t2.micro"
+  
+  tags = {
+    name = "my-flask-app"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo amazon-linux-extras install ansible2 -y",
+      "sudo apt install git -y",
+      "git clone https://github.com/devops-school/ansible-hello-world-role /tmp/ans_ws",
+      "ansible-playbook /tmp/ans_ws/site.yaml"
+    ]
+  }
+}

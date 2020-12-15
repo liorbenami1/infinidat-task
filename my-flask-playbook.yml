@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - my-flask
+  vars:
+    - doc_root: /var/www/my-flask
+    - default_container_name: my-flask-docker-app
