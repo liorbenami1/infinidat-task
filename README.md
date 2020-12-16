@@ -18,12 +18,12 @@
 3. copy a tmp-key-pair.pem file to the new folder or change main.tf to your *.pem file
 
 # Usage description
-1) cd to the cloned folder or to the new folder (accourding to previos section)
-2) run: terraform init
-3) run: terraform apply
-        approve: yes
-        It will take about 5-7 miniutes until the Ec2 instance will create and the user_data.sh finish to run
-4) Terraform will output the \<public IP\> when finished
+1. cd to the cloned folder or to the new folder (accourding to previos section)
+2. run: terraform init
+3. run: terraform apply
+4. approve: yes
+5. It will take about 5-7 miniutes until the Ec2 instance will create and the user_data.sh finish to run
+6. Terraform will output the \<public IP\> when finished
    
 # Access you app:
 http://\<public IP\>/hi
