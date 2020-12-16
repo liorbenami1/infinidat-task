@@ -4,7 +4,7 @@ provider "aws" {
 
 #resource "aws_key_pair" "terraform-demo" {
 #  key_name   = "terraform-demo"
-#  public_key = "${file("terraform-demo.pub")}"
+#  public_key = file("terraform-demo.pub")
 #}
 
 resource "aws_instance" "my-instance" {
@@ -12,7 +12,7 @@ resource "aws_instance" "my-instance" {
 	instance_type = "t2.nano"
 	#key_name = "${aws_key_pair.terraform-demo.key_name}"
 	key_name = "my-key-pair.pem"
-	user_data = "${file("user_data.sh")}"
+	user_data = file("user_data.sh")
 	tags = {
 		Name = "Terraform"	
 		Batch = "5AM"
