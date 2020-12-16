@@ -35,7 +35,7 @@
     - name: Create image
       docker_image:
         name: "{{ default_container_name }}"
-        path: /home/vagrant/terraform/infinidat-task/flask-application/
+        path: /var/local/src/instance-bootstrap/flask-application
         state: present
     - name: Run the container
       docker_container:
