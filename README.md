@@ -22,8 +22,8 @@
 2. run: terraform init
 3. run: terraform apply
 4. approve: yes
-5. It will take about 5-7 miniutes until the Ec2 instance will create and the user_data.sh finish to run
-6. Terraform will output the \<public IP\> when finished
+5. Terraform will output the \<public IP\> when finished
+6. It will take about 5-7 miniutes until the Ec2 instance will create and the user_data.sh finish to run
    
 # Access you app:
 http://\<public IP\>/hi
