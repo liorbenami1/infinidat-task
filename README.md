@@ -14,7 +14,7 @@
         run container from this image
 # pre-requisite:
 1. terraform installed & aws cli configured
-2. clone this repo or copy all *.tf files to a fresh folder
+2. clone this repo or copy all *.tf files and user_data.sh to a fresh folder
 3. copy a tmp-key-pair.pem file to the new folder or change main.tf to your *.pem file
 
 # Usage description
