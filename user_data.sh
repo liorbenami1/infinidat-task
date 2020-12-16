@@ -11,21 +11,23 @@ function main {
   declare -r url=$1 playbook=$2
 
   # Ensure the instance is up-to-date.
-  sudo apt-get update 
+  sudo apt-get update -y
 
   # Install required packages.
-  sudo apt-get install git
+  sudo apt-get install git -y
 
+  # install pip
+  sudo apt-get install python-pip -y
   # Install Ansible! We use pip as the EPEL package runs on Python 2.6...
   sudo pip install ansible
 
   # Download our Ansible repository and run the given playbook. Pip installs
   # executables into a directory not in the root users $PATH.
-  /usr/local/bin/ansible-pull --accept-host-key --verbose \
+  sudo /usr/local/bin/ansible-pull --accept-host-key --verbose \
     --url "$url" --directory /var/local/src/instance-bootstrap "$playbook"
 }
 
-# 
+#
 main \
   'https://github.com/liorbenami1/infinidat-task.git' \
   'my-flask-playbook.yml'
