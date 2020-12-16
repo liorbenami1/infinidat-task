@@ -13,9 +13,15 @@
         create a docker image from out flask app
         run container from this image
 # pre-requisite:
-1. terraform installed & aws cli configured
-2. clone this repo or copy all *.tf files and user_data.sh to a fresh folder
-3. copy a tmp-key-pair.pem file to the new folder or change main.tf to your *.pem file
+terraform installed & aws cli configured
+
+# Instruction:
+1. download the zip file: infinidat-task-lior-ben-ami.zip and unzip it
+2. cd to infinidat-task-lior-ben-ami
+# OR
+1. clone this repo and cd to new cloned folder: infinidat-task
+2. copy a tmp-key-pair.pem file to the new folder or change main.tf to your *.pem file
+
 
 # Usage description
 1. cd to the cloned folder or to the new folder (accourding to previos section)
