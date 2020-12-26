@@ -29,7 +29,7 @@ terraform installed & aws cli configured
 3. run: terraform apply
 4. approve: yes
 5. Terraform will output the \<public IP\> when finished
-6. You can login the teh Ec2 instance with: ssh ubuntu@\<public IP\> -i tmp-key-pair.pem
+6. You can login to the Ec2 instance with: ssh ubuntu@\<public IP\> -i tmp-key-pair.pem
 7. The script will clone the repo under: /var/local/src/instance-bootstrap
 8. a /tmp/user_data_boot.log will be created
 9. It will take about 5-7 miniutes until the Ec2 instance will create and the user_data.sh finish to run
