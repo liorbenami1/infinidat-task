@@ -45,7 +45,7 @@ resource "aws_security_group" "ubuntu" {
 resource "aws_instance" "ubuntu" {
 	ami = "ami-04169656fea786776"
 	instance_type = "t2.micro"
-	key_name = "tmp-key-pair"
+	key_name = "myKeyPair"
 	user_data = file("user_data.sh")
 	tags = {
 		Name = "ubuntu"	
